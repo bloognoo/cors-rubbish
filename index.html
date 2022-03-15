@@ -1,0 +1,17 @@
+<html>
+  <body>
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <script>
+    $.ajax({
+      dataType: "jsonp",
+      url: "https://gis.devcloud.cae.com/London_West_R5C4/tileset.json",
+      context: document.body
+    }).done(function() {
+      $( this ).addClass( "done" );
+    });
+  </script>
+</html>
